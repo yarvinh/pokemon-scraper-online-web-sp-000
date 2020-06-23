@@ -1,8 +1,12 @@
 class Pokemon
   attr_accessor :name, :type, :db
   attr_reader :id
-  def initialize(file)
-  p   file.each{|k,v| self.send("#{k}=",v)}
+  def initialize(:id, :name, :type, :db)
+    @id = id
+    @name = name
+    @type = type
+    @db = db
+
   end
 
 end
